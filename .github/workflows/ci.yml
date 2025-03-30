@@ -91,7 +91,11 @@ jobs:
         with:
           ruby-version: 3.3.7
           bundler-cache: true
-
+      - name: Install dependencies
+        run: bundle install
+  
+      - name: Regenerate missing binstubs
+        run: bundle exec rails app:update:bin
       - name: Run tests
         env:
           RAILS_ENV: test
