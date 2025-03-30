@@ -38,9 +38,10 @@ jobs:
           bundler-cache: true
       - name: Install dependencies
         run: bundle install
-  
+      - name: Regenerate missing binstubs
+        run: bundle exec rails app:update:bin
       - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bundle exec importmap audit
+        run: bundle exec importmap:audit
 
   lint:
     runs-on: ubuntu-latest
