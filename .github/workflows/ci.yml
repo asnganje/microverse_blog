@@ -16,7 +16,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version
+          ruby-version: 3.3.7
           bundler-cache: true
       - name: Fix permissions for Brakeman
         run: chmod +x bin/brakeman
@@ -34,7 +34,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version
+          ruby-version: 3.3.7
           bundler-cache: true
 
       - name: Fix permissions for Importmap
@@ -52,7 +52,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version
+          ruby-version: 3.3.7
           bundler-cache: true
 
       - name: Fix permissions for RuboCop
@@ -90,7 +90,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version
+          ruby-version: 3.3.7
           bundler-cache: true
 
       - name: Run tests
