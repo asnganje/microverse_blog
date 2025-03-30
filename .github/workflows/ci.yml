@@ -40,6 +40,8 @@ jobs:
         run: bundle install
       - name: Regenerate missing binstubs
         run: bundle exec rails app:update:bin
+      - name: Debug Bundler
+        run: bundle list
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bundle exec importmap:audit
 
